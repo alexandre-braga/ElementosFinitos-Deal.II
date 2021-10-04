@@ -1,0 +1,10 @@
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/rebuild_cache.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/edit_cache.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/strip_comments.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/distclean.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/runclean.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/release.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/debug.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/run.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/info.dir
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/build/CMakeFiles/step-2.dir

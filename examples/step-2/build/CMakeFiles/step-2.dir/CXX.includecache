@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kuroneko/ufjf/Deal2/dealii-9.3.1/examples/step-2/step-2.cc
+deal.II/grid/tria.h
+-
+deal.II/grid/grid_generator.h
+-
+deal.II/dofs/dof_handler.h
+-
+deal.II/fe/fe_q.h
+-
+deal.II/dofs/dof_tools.h
+-
+deal.II/lac/sparse_matrix.h
+-
+deal.II/lac/dynamic_sparsity_pattern.h
+-
+deal.II/dofs/dof_renumbering.h
+-
+fstream
+-
+
