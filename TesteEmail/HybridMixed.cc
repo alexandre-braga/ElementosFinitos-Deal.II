@@ -562,7 +562,7 @@ int main ()
 
     ConvergenceTable convergence_table;
 
-    for (int i = 2; i < 7; ++i)
+    for (int i = 1; i < 6; ++i)
     {
         MixedLaplaceProblem<dim> mixed_laplace_problem(1);
         mixed_laplace_problem.run (i, convergence_table);
