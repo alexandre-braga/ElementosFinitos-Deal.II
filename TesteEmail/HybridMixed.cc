@@ -70,40 +70,56 @@ using namespace dealii;
     
     
     template <int dim>
-    class ExactSolution : public Function<dim>
+    class BoundaryPressure : public Function<dim>
     {
     public:
-        ExactSolution () : Function<dim>(dim+1) {}
-        virtual void vector_value (const Point<dim> &p,
-                                   Vector<double>   &values) const
+        BoundaryPressure () : Function<dim>(1) {}
+        virtual double value (const Point<dim>   &p,
+                              const unsigned int  /*component = 0*/) const
         {
-            Assert (values.size() == dim+1,
-                    ExcDimensionMismatch (values.size(), dim+1));
-            
-            for (unsigned int i = 0; i < dim; ++i)
-            {
-                values[i] = -M_PI;
-                for (unsigned int j = 0; j < dim; ++j)
-                {
-                    if (i == j)
-                    {
-                        values[i] *= cos(M_PI * p[j]);
-                    }
-                    else
-                    {
-                        values[i] *= sin(M_PI * p[j]);
-                    }
-                }
-            }
-            
-            values[dim] = 1.0;
+            double return_value = 1.0;
             for (int i = 0; i < dim; ++i)
             {
-                values[dim] *= sin(M_PI * p[i]);
+                return_value *= sin(M_PI * p[i]);
             }
+            return return_value;
         }
     };
 
+template <int dim>
+class ExactSolution : public Function<dim>
+{
+public:
+    ExactSolution () : Function<dim>(dim+1) {}
+    virtual void vector_value (const Point<dim> &p,
+                               Vector<double>   &values) const
+    {
+        Assert (values.size() == dim+1,
+                ExcDimensionMismatch (values.size(), dim+1));
+        
+        for (unsigned int i = 0; i < dim; ++i)
+        {
+            values[i] = -M_PI;
+            for (unsigned int j = 0; j < dim; ++j)
+            {
+                if (i == j)
+                {
+                    values[i] *= cos(M_PI * p[j]);
+                }
+                else
+                {
+                    values[i] *= sin(M_PI * p[j]);
+                }
+            }
+        }
+        
+        values[dim] = 1.0;
+        for (int i = 0; i < dim; ++i)
+        {
+            values[dim] *= sin(M_PI * p[i]);
+        }
+    }
+};
 
 
 
@@ -184,9 +200,8 @@ private:
 
         constraints.clear ();
 //        DoFTools::make_hanging_node_constraints (dof_handler, constraints);
-        ExactSolution<dim> solution_function;
-        FEValuesExtractors::Scalar pressure(dim);
-        VectorTools::interpolate_boundary_values (dof_handler, 0, solution_function, constraints, fe.component_mask(pressure));
+        BoundaryPressure <dim> solution_function;
+        VectorTools::interpolate_boundary_values (dof_handler, 0, solution_function, constraints);
         constraints.close ();
     }
 
@@ -562,7 +577,7 @@ int main ()
 
     ConvergenceTable convergence_table;
 
-    for (int i = 1; i < 6; ++i)
+    for (int i = 1; i < 7; ++i)
     {
         MixedLaplaceProblem<dim> mixed_laplace_problem(1);
         mixed_laplace_problem.run (i, convergence_table);

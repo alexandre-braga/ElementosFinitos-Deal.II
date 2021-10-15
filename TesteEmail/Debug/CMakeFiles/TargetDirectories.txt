@@ -1,0 +1,10 @@
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/rebuild_cache.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/info.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/edit_cache.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/strip_comments.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/runclean.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/release.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/debug.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/run.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/distclean.dir
+/home/kuroneko/ufjf/Deal2/TesteEmail/build/CMakeFiles/HybridMixed.dir
