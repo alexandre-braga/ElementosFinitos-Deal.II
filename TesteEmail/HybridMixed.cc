@@ -250,7 +250,7 @@ private:
         const FEValuesExtractors::Vector velocities (0);
         const FEValuesExtractors::Scalar pressure (dim);
 
-        const double beta_stab_0 = - 1.0;
+        const double beta_stab_0 = -1.0;
         double beta_stab_p;
         const double del1 = -0.5;
         const double del2 =  0.5;
@@ -573,13 +573,13 @@ int main ()
     using namespace dealii;
     using namespace AulasDealII;
 
-    const int dim = 2;
+    const int dim = 3;
 
     ConvergenceTable convergence_table;
 
-    for (int i = 1; i < 7; ++i)
+    for (int i = 1; i < 6; ++i)
     {
-        MixedLaplaceProblem<dim> mixed_laplace_problem(1);
+        MixedLaplaceProblem<dim> mixed_laplace_problem(2);
         mixed_laplace_problem.run (i, convergence_table);
     }
 
